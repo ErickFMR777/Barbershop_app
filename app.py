@@ -45,8 +45,12 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
-    /* Forzar fuente global */
-    html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
+
+    /* Forzar fuente global y fondo oscuro fijo */
+    html, body, [class*="css"] {
+        font-family: 'Inter', sans-serif;
+        background-color: #181b22 !important;
+    }
 
     /* ── Paleta ──
        Primario:  #c9a45c (dorado barbería)
