@@ -42,6 +42,26 @@ st.set_page_config(
 
 # ── Estilos CSS profesionales ─────────────────────────────────────────
 st.markdown("""
+        /* Cubre todo el fondo con un pseudo-elemento fijo, incluso fuera del alcance de Streamlit */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw; height: 100vh;
+            background: #181b22 !important;
+            z-index: 0;
+            pointer-events: none;
+        }
+        /* Eleva el contenido principal por encima del fondo */
+        #root, .main, .block-container, .stApp, .stApp > div:first-child {
+            position: relative;
+            z-index: 1;
+        }
+    /* Forzar fondo oscuro universal en todos los elementos */
+    * {
+        background-color: #181b22 !important;
+        box-shadow: none !important;
+    }
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -49,6 +69,18 @@ st.markdown("""
     /* Forzar fuente global y fondo oscuro fijo */
     html, body, [class*="css"] {
         font-family: 'Inter', sans-serif;
+        background-color: #181b22 !important;
+        color-scheme: dark;
+    }
+    body::before, body::after, html::before, html::after {
+        background: #181b22 !important;
+    }
+    /* Forzar fondo en overlays y root de Streamlit */
+    #root, .main, .block-container, .stApp, .stApp > div:first-child {
+        background-color: #181b22 !important;
+    }
+    /* Quitar fondo blanco de overlays móviles */
+    [data-testid="stAppViewContainer"], [data-testid="stHeader"], [data-testid="stSidebar"], [data-testid="stToolbar"] {
         background-color: #181b22 !important;
     }
 
