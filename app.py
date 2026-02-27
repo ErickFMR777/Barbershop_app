@@ -17,7 +17,6 @@ from database import (
     buscar_citas_por_telefono,
     obtener_pin_barbero,
     cambiar_pin_barbero,
-    HORA_APERTURA,
     HORA_CIERRE,
     hoy_colombia,
     ahora_colombia,
@@ -42,26 +41,6 @@ st.set_page_config(
 
 # ── Estilos CSS profesionales ─────────────────────────────────────────
 st.markdown("""
-        /* Cubre todo el fondo con un pseudo-elemento fijo, incluso fuera del alcance de Streamlit */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            width: 100vw; height: 100vh;
-            background: #181b22 !important;
-            z-index: 0;
-            pointer-events: none;
-        }
-        /* Eleva el contenido principal por encima del fondo */
-        #root, .main, .block-container, .stApp, .stApp > div:first-child {
-            position: relative;
-            z-index: 1;
-        }
-    /* Forzar fondo oscuro universal en todos los elementos */
-    * {
-        background-color: #181b22 !important;
-        box-shadow: none !important;
-    }
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
