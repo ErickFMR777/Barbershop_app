@@ -26,3 +26,6 @@ streamlit run app.py
 | `database.py`     | Lógica de base de datos (SQLite)             |
 | `requirements.txt`| Dependencias del proyecto                    |
 | `barbershop.db`   | Base de datos SQLite (se crea automáticamente)|
+
+License
+MIT
