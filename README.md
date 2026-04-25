@@ -27,5 +27,11 @@ streamlit run app.py
 | `requirements.txt`| Dependencias del proyecto                    |
 | `barbershop.db`   | Base de datos SQLite (se crea automáticamente)|
 
-License
+---
+
+## 📄 Licencia
+
 MIT
+
+---
+
